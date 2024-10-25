@@ -2,10 +2,7 @@
 
 **Author: Zheyun Zhao**
 
-This Python application detects a laser pointer's position and distance in real-time using a webcam feed. The
-application identifies laser points up to 2 meters away, with an accuracy tolerance of ±10 cm. It visualizes the
-detected laser point on the screen, displaying its coordinates and estimated distance from the camera. The application
-is built using OpenCV for image processing and Tkinter for adaptive screen sizing.
+This Python application detects a laser pointer's position and distance in real-time using a webcam feed. The application identifies laser points up to 2 meters away, with an accuracy tolerance of ±10 cm. It visualizes the detected laser point on the screen, displaying its coordinates and estimated distance from the camera. The application is built using OpenCV for image processing and Tkinter for adaptive screen sizing.
 
 ## Table of Contents
 
@@ -24,8 +21,7 @@ https://github.com/CharlesZZY/Laser-Pointer-Detection
 ## Features
 
 - **Real-time Detection**: Continuously detects laser points through a live webcam feed.
-- **Distance Estimation**: Estimates the laser pointer’s distance from the camera within a 2-meter range, with a 10 cm
-  tolerance.
+- **Distance Estimation**: Estimates the laser pointer’s distance from the camera within a 2-meter range, with a 10 cm tolerance.
 - **Visual Feedback**: Displays laser pointer coordinates and distance on the video feed.
 - **Mask Visualization**: Shows different image masks for debugging and precise laser localization.
 
@@ -62,8 +58,7 @@ https://github.com/CharlesZZY/Laser-Pointer-Detection
 2. **Exit**:
    Press `q` to exit the application.
 
-When running, the application detects a red laser point and displays its position and estimated distance on the screen.
-The live feed also shows debug masks that illustrate the detection process.
+When running, the application detects a red laser point and displays its position and estimated distance on the screen. The live feed also shows debug masks that illustrate the detection process.
 
 ### Example Output
 
