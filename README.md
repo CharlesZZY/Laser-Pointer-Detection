@@ -1,6 +1,6 @@
 # Laser Pointer Detection Application
 
-Author: Zheyun Zhao
+**Author: Zheyun Zhao**
 
 This Python application detects a laser pointer's position and distance in real-time using a webcam feed. The
 application identifies laser points up to 2 meters away, with an accuracy tolerance of ±10 cm. It visualizes the
@@ -139,8 +139,7 @@ Unit tests ensure the accuracy of laser detection and distance estimation functi
 file, `tests/test_detection.py`, verifies the following:
 
 - **Laser Detection**: Detects laser point in a test image, saves annotated images and masks to the `output` folder.
-- **Distance Estimation**: Confirms that distance calculations for various laser point sizes remain within expected
-  thresholds.
+- **Distance Estimation**: Confirms that distance calculations for various laser point sizes remain within expected thresholds.
 
 ### Running Tests
 
@@ -152,5 +151,4 @@ file, `tests/test_detection.py`, verifies the following:
 
 ---
 
-This application is designed to accurately and reliably detect laser pointers within a controlled range, providing a
-foundation for advanced real-time object tracking systems.
+This application is designed to accurately and reliably detect laser pointers within a controlled range, providing a foundation for advanced real-time object tracking systems.
