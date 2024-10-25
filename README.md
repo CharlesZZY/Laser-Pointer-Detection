@@ -2,7 +2,10 @@
 
 **Author: Zheyun Zhao**
 
-This Python application detects a laser pointer's position and distance in real-time using a webcam feed. The application identifies laser points up to 2 meters away, with an accuracy tolerance of ±10 cm. It visualizes the detected laser point on the screen, displaying its coordinates and estimated distance from the camera. The application is built using OpenCV for image processing and Tkinter for adaptive screen sizing.
+This Python application detects a laser pointer's position and distance in real-time using a webcam feed. The
+application identifies laser points up to 2 meters away, with an accuracy tolerance of ±10 cm. It visualizes the
+detected laser point on the screen, displaying its coordinates and estimated distance from the camera. The application
+is built using OpenCV for image processing and Tkinter for adaptive screen sizing.
 
 ## Table of Contents
 
@@ -21,7 +24,8 @@ https://github.com/CharlesZZY/Laser-Pointer-Detection
 ## Features
 
 - **Real-time Detection**: Continuously detects laser points through a live webcam feed.
-- **Distance Estimation**: Estimates the laser pointer’s distance from the camera within a 2-meter range, with a 10 cm tolerance.
+- **Distance Estimation**: Estimates the laser pointer’s distance from the camera within a 2-meter range, with a 10 cm
+  tolerance.
 - **Visual Feedback**: Displays laser pointer coordinates and distance on the video feed.
 - **Mask Visualization**: Shows different image masks for debugging and precise laser localization.
 
@@ -58,7 +62,8 @@ https://github.com/CharlesZZY/Laser-Pointer-Detection
 2. **Exit**:
    Press `q` to exit the application.
 
-When running, the application detects a red laser point and displays its position and estimated distance on the screen. The live feed also shows debug masks that illustrate the detection process.
+When running, the application detects a red laser point and displays its position and estimated distance on the screen.
+The live feed also shows debug masks that illustrate the detection process.
 
 ### Example Output
 
@@ -134,7 +139,8 @@ Unit tests ensure the accuracy of laser detection and distance estimation functi
 file, `tests/test_detection.py`, verifies the following:
 
 - **Laser Detection**: Detects laser point in a test image, saves annotated images and masks to the `output` folder.
-- **Distance Estimation**: Confirms that distance calculations for various laser point sizes remain within expected thresholds.
+- **Distance Estimation**: Confirms that distance calculations for various laser point sizes remain within expected
+  thresholds.
 
 ### Running Tests
 
@@ -144,6 +150,38 @@ file, `tests/test_detection.py`, verifies the following:
    python -m unittest discover -s tests
    ```
 
+### Laser Detection Workflow
+
+The following flowchart illustrates the key steps in the laser detection process:
+
+```mermaid
+flowchart TD
+    A[Start] --> B["Initialize Detector<br>(Load configurations)"]
+    B --> C[Start Webcam Capture]
+    C --> D[Loop Start: For each frame]
+    D --> E[Capture Frame]
+    E --> F[Convert to Grayscale]
+    F --> G[Apply Intensity Threshold]
+    G --> H[Convert to HSV Color Space]
+    H --> I[Generate Red Color Mask]
+    I --> J[Combine Red and Grayscale Masks]
+    J --> K[Apply Morphological Operations]
+    K --> L[Detect Contours]
+    
+    L --> M{Laser Point Detected?}
+    M -- Yes --> N[Estimate Distance]
+    N --> O[Draw Position and Distance]
+    O --> P[Display Frame with Annotations]
+    P --> Q{Press 'q' to quit?}
+    Q -- No --> D
+    Q -- Yes --> R[Release Resources]
+    
+    M -- No --> P
+    R --> S[End]
+```
+
 ---
 
-This application is designed to accurately and reliably detect laser pointers within a controlled range, providing a foundation for advanced real-time object tracking systems.
+This application is designed to accurately and reliably detect laser pointers within a controlled range, providing a
+foundation for advanced real-time object tracking systems.
+
