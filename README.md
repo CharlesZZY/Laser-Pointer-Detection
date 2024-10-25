@@ -7,12 +7,17 @@ is built using OpenCV for image processing and Tkinter for adaptive screen sizin
 
 ## Table of Contents
 
+- [Code Repository](#code-repository)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Project Structure](#project-structure)
 - [Testing](#testing)
+
+## Code Repository
+
+https://github.com/CharlesZZY/Laser-Pointer-Detection
 
 ## Features
 
