@@ -16,6 +16,7 @@ is built using OpenCV for image processing and Tkinter for adaptive screen sizin
 - [Configuration](#configuration)
 - [Project Structure](#project-structure)
 - [Testing](#testing)
+- [Laser Detection Workflow](#laser-detection-workflow)
 
 ## Code Repository
 
